@@ -1,0 +1,373 @@
+{
+	"info": {
+		"_postman_id": "90e9dd19-19ac-42b9-8380-f79606f022d6",
+		"name": "m8_final_drilling",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "28707851"
+	},
+	"item": [
+		{
+			"name": "Users",
+			"item": [
+				{
+					"name": "signUp (or createUser)",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Prueba\",\n    \"lastName\": \"Prueba\",\n    \"email\": \"prueba@email.com\",\n    \"password\": \"prueba12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/signup/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"signup",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "signIn",
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"email\": \"prueba@email.com\",\n    \"password\": \"prueba12345\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/signin/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"signin",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllUsers",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA0ODA0ODIsInVzdWFyaW8iOnsiaWQiOjUsImZpcnN0TmFtZSI6IlBydWViYSIsImxhc3ROYW1lIjoiUHJ1ZWJhIiwiZW1haWwiOiJwcnVlYmFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkT2F2dGxITnJFRVQ2dEhBZTBVVU95ZTUxNHBlNjEydjdiYUUwVkhVVnhlQmxEZVlDMHZVcUcifSwiaWF0IjoxNjkwNDc2ODgyfQ.qEaY2ev5Abx3-zI5V1usvqQkfmqi94ZeBeWBOgPFMFQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findUserById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA0ODA0ODIsInVzdWFyaW8iOnsiaWQiOjUsImZpcnN0TmFtZSI6IlBydWViYSIsImxhc3ROYW1lIjoiUHJ1ZWJhIiwiZW1haWwiOiJwcnVlYmFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkT2F2dGxITnJFRVQ2dEhBZTBVVU95ZTUxNHBlNjEydjdiYUUwVkhVVnhlQmxEZVlDMHZVcUcifSwiaWF0IjoxNjkwNDc2ODgyfQ.qEaY2ev5Abx3-zI5V1usvqQkfmqi94ZeBeWBOgPFMFQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "updateUserById",
+					"request": {
+						"method": "PUT",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA0ODA0ODIsInVzdWFyaW8iOnsiaWQiOjUsImZpcnN0TmFtZSI6IlBydWViYSIsImxhc3ROYW1lIjoiUHJ1ZWJhIiwiZW1haWwiOiJwcnVlYmFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkT2F2dGxITnJFRVQ2dEhBZTBVVU95ZTUxNHBlNjEydjdiYUUwVkhVVnhlQmxEZVlDMHZVcUcifSwiaWF0IjoxNjkwNDc2ODgyfQ.qEaY2ev5Abx3-zI5V1usvqQkfmqi94ZeBeWBOgPFMFQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"firstName\": \"Prueba\",\n    \"lastName\": \"Prueba\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "deleteUserById",
+					"request": {
+						"method": "DELETE",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA0ODA0ODIsInVzdWFyaW8iOnsiaWQiOjUsImZpcnN0TmFtZSI6IlBydWViYSIsImxhc3ROYW1lIjoiUHJ1ZWJhIiwiZW1haWwiOiJwcnVlYmFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkT2F2dGxITnJFRVQ2dEhBZTBVVU95ZTUxNHBlNjEydjdiYUUwVkhVVnhlQmxEZVlDMHZVcUcifSwiaWF0IjoxNjkwNDc2ODgyfQ.qEaY2ev5Abx3-zI5V1usvqQkfmqi94ZeBeWBOgPFMFQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/user/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"user",
+								"1"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		},
+		{
+			"name": "Bootcamps",
+			"item": [
+				{
+					"name": "findBootcampById",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA0ODA0ODIsInVzdWFyaW8iOnsiaWQiOjUsImZpcnN0TmFtZSI6IlBydWViYSIsImxhc3ROYW1lIjoiUHJ1ZWJhIiwiZW1haWwiOiJwcnVlYmFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkT2F2dGxITnJFRVQ2dEhBZTBVVU95ZTUxNHBlNjEydjdiYUUwVkhVVnhlQmxEZVlDMHZVcUcifSwiaWF0IjoxNjkwNDc2ODgyfQ.qEaY2ev5Abx3-zI5V1usvqQkfmqi94ZeBeWBOgPFMFQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/bootcamp/1",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bootcamp",
+								"1"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "findAllBootcamp",
+					"protocolProfileBehavior": {
+						"disableBodyPruning": true
+					},
+					"request": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/bootcamp/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bootcamp",
+								""
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "addUserToBootcamp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA0ODA0ODIsInVzdWFyaW8iOnsiaWQiOjUsImZpcnN0TmFtZSI6IlBydWViYSIsImxhc3ROYW1lIjoiUHJ1ZWJhIiwiZW1haWwiOiJwcnVlYmFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkT2F2dGxITnJFRVQ2dEhBZTBVVU95ZTUxNHBlNjEydjdiYUUwVkhVVnhlQmxEZVlDMHZVcUcifSwiaWF0IjoxNjkwNDc2ODgyfQ.qEaY2ev5Abx3-zI5V1usvqQkfmqi94ZeBeWBOgPFMFQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"idBootcamp\": 1,\n    \"idUser\": 5\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/bootcamp/adduser",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bootcamp",
+								"adduser"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "createBootcamp",
+					"request": {
+						"method": "POST",
+						"header": [
+							{
+								"key": "authorization",
+								"value": "Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJleHAiOjE2OTA0ODA0ODIsInVzdWFyaW8iOnsiaWQiOjUsImZpcnN0TmFtZSI6IlBydWViYSIsImxhc3ROYW1lIjoiUHJ1ZWJhIiwiZW1haWwiOiJwcnVlYmFAZW1haWwuY29tIiwicGFzc3dvcmQiOiIkMmEkMTAkT2F2dGxITnJFRVQ2dEhBZTBVVU95ZTUxNHBlNjEydjdiYUUwVkhVVnhlQmxEZVlDMHZVcUcifSwiaWF0IjoxNjkwNDc2ODgyfQ.qEaY2ev5Abx3-zI5V1usvqQkfmqi94ZeBeWBOgPFMFQ",
+								"type": "text"
+							}
+						],
+						"body": {
+							"mode": "raw",
+							"raw": "{\n    \"title\": \"Prueba Bootcamp\",\n    \"cue\": 10,\n    \"description\": \"Prueba Bootcamp\"\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/bootcamp/",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"bootcamp",
+								""
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

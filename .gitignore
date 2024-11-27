@@ -1,0 +1,10 @@
+# Node.js and Express
+node_modules/
+pnpm-lock.yaml
+*.log
+
+# macOS
+.DS_Store
+
+# VSCode
+.vscode/
